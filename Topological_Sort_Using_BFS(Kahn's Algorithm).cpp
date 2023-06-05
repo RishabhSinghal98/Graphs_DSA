@@ -80,5 +80,5 @@ int main()
 	
 }
 
-// Time Complexity :O(v+E)
-// Space Complexity:O(V)
+// Time Complexity :O(V+E)
+// Space Complexity:O(V+E)
