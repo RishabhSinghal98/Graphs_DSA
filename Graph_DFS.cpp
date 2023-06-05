@@ -11,7 +11,7 @@ void dfs(int source,vector<int>&visited,vector<vector<int>>&graph)
 	{
 		if(visited[x]==0) //checking whether the child is visited or not
 		{
-			dfs(x,visited,graph); // recuursively calling dfs again to go to the last node through the child nodes 
+			dfs(x,visited,graph); // recursively calling dfs again to go to the last node through the neighbour nodes 
 		}
 	}
 	
@@ -19,9 +19,9 @@ void dfs(int source,vector<int>&visited,vector<vector<int>>&graph)
 
 void creategraph(int node1,int node2,vector<vector<int>>& graph)
 {
-    // creating graph pushing node2 at vector node1 index
+    // creating graph ( pushing node2 at vector's node1 index)
 	graph[node1].push_back(node2);
-	//creating graph pushing node1 at vector node2 index
+	//creating graph (pushing node1 at vector's node2 index)
 	graph[node2].push_back(node1);
 }
 int main()
@@ -38,7 +38,7 @@ int main()
 	creategraph(2,3,graph);
 	creategraph(3,3,graph);
 	
-	// creating an array to mark visited nodes initally witl all zeroes
+	// creating an array to mark visited nodes initially witl all zeroes
 	vector<int> visited(vertices,0);
 	
 	dfs(2,visited,graph); // 2 is the source node
